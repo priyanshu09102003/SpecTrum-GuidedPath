@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { authClient } from "@/lib/auth-client";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 
@@ -35,7 +36,7 @@ export default function Home() {
     {session ? <div>
       <p>{session.user.name}</p>
       <Button onClick={signOut} className="cursor-pointer">Logout</Button>
-    </div>: <Button className="cursor-pointer">Login</Button>}
+    </div>: <Link href="/login"><Button className="cursor-pointer">Login</Button></Link>}
    </div>
   );
 }
