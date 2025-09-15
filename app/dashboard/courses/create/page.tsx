@@ -13,6 +13,7 @@ import slugify from 'slugify'
 import { Textarea } from '@/components/ui/textarea'
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@/components/ui/select'
 import { RichTextEditor } from '@/components/rich-text-editor/editor'
+import { Uploader } from '@/components/file-uploader/Uploader'
 
 
 const CreateCoursespage = () => {
@@ -121,7 +122,6 @@ const CreateCoursespage = () => {
                         <FormItem className='w-full'>
                             <FormLabel className='font-semibold'>Course Description  </FormLabel>
                             <FormControl>
-                                {/* <Textarea placeholder="Enter a detailed description for your course" {...field} className='min-h-[120px]' /> */}
 
                                 <RichTextEditor field={field} />
                             </FormControl>
@@ -136,7 +136,9 @@ const CreateCoursespage = () => {
                         <FormItem className='w-full'>
                             <FormLabel className='font-semibold'>Thumbnail Image </FormLabel>
                             <FormControl>
-                                <Input placeholder="Thumbnail Url" {...field} />
+                                {/* <Input placeholder="Thumbnail Url" {...field} /> */}
+
+                                <Uploader />
                             </FormControl>
 
                             <FormMessage />
